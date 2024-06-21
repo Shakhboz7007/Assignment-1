@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="The name of the document’s author to go here" />
+	<meta name="description" content="A concise and accurate summary of the document content is to appear here">
+    <title>PizzaNova</title>
+    
+    <!-- linking css file  -->
+    <link rel="stylesheet" href="mystyle.css">
+    <!-- <link rel="stylesheet" href="mystyle.css"> -->
+    <style>
+     
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            box-sizing: border-box;
+            height: 100%;
+            position: relative;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        main {
+            padding-bottom: 50px;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #f8f8f8;
+            text-align: center;
+            padding: 10px 0;
+            display: none;
+        }
+
+        fieldset {
+            margin-bottom: 20px;
+        }
+
+        fieldset label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        fieldset input[type="text"],
+        fieldset input[type="tel"],
+        fieldset input[type="number"],
+        fieldset input[type="time"],
+        fieldset textarea,
+        fieldset select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        fieldset input[type="submit"],
+        fieldset input[type="reset"] {
+            width: auto;
+        }
+
+        fieldset.payment-methods {
+            display: flex;
+            gap: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <!-- head section of the page -->
+    <header>
+        <h1>Welcome to PizzaNova</h1>
+        <h4>Fast Fresh Delicious</h4>
+    </header>
+
+    <!-- main section of the page -->
+    <main>
+        <fieldset>
+            <legend>Category</legend>
+            <input type="radio" id="veg" name="Category" value="veg">
+            <label for="veg">Vegetarian</label><br>
+            <input type="radio" id="non-veg" name="Category" value="nonveg">
+            <label for="non-veg">Non-Vegetarian</label>
+        </fieldset>
+
+        <fieldset>
+            <!-- description of the pizza  -->
+            <legend>Description</legend>
+            <label for="numberofpizza">Number of Pizzas:</label>
+            <input type="number" id="numberofpizza" name="numberofpizza" max="15" min="1" required><br>
+           
+            <!--size of the pizza  -->
+            <label for="size">Size:</label>
+            <select>
+                <option>Small</option>
+                <option>Medium</option>
+                <option>Large</option>
+            </select><br>
+            
+            <!-- shape of the pizza  -->
+            <label for="shape">Shape:</label>
+            <input type="radio" id="circle" name="shape" value="circle">
+            <label for="circle">Circle</label>
+            <input type="radio" id="rectangle" name="shape" value="rectangle">
+            <label for="rectangle">Rectangle</label><br>
+            
+            <!-- toppings for the pizza  -->
+            <label for="toppings">Toppings:</label>
+            <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
+            <label for="pepperoni">Pepperoni</label>
+            <input type="checkbox" id="mushrooms" name="toppings" value="mushrooms">
+            <label for="mushrooms">Mushrooms</label>
+            <input type="checkbox" id="olives" name="toppings" value="olives">
+            <label for="olives">Olives</label>
+            <input type="checkbox" id="cheese" name="toppings" value="cheese">
+            <label for="cheese">Extra Cheese</label>
+            <input type="checkbox" id="pineapple" name="toppings" value="pineapple">
+            <label for="pineapple">Pineapple</label>
+            <input type="checkbox" id="corn" name="toppings" value="corn">
+            <label for="corn">Corn</label><br>
+
+            <!-- type of crust for the pizza  -->
+            <label for="crust">Crust:</label>
+            <select id="crust" name="crust">
+                <option value="thin">Thin </option>
+                <option value="thick">Thick</option>
+                <option value="thincruchy">Crunchy Thin</option>    
+            </select><br>
+
+            <!-- methods to deliver the pizza  -->
+            <label for="delivery">Delivery Mode:</label>
+            <select id="delivery" name="delivery">
+                <option value="homedelivery">Home Delivery</option>
+                <option value="takeaway">Take Away</option>
+                <option value="eat-in">Eat In</option>
+                <option value="uber-eats">Uber Eats</option>
+            </select><br>
+
+            <!-- additional notes if needed  -->
+            <label for="comments">Additional note:</label>
+            <textarea id="comments" name="comments"></textarea><br>
+        </fieldset>
+
+        <!-- Customer Information -->
+        <fieldset>
+            <legend>Customer Information</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="contact">Contact Number:</label>
+            <input type="tel" id="contact" name="contact" required>
+            <br>
+            <label for="street">Street:</label>
+            <input type="text" id="street" name="street" required>
+            <br>
+            <label for="house">House Number:</label>
+            <input type="text" id="house" name="house" required>
+            <br>
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+            <br>
+            <label for="postal">Postal Code:</label>
+            <input type="text" id="postal" name="postal" required>
+        </fieldset>
+
+        <!-- payment mode for the Customer  -->
+        <fieldset>
+            <legend>Pay By </legend>
+            <div class="payment-methods">
+                <input type="checkbox" id="cash" name="payment" value="cash">
+                <label for="cash">Cash on Delivery</label>
+                <input type="checkbox" id="credit" name="payment" value="credit">
+                <label for="credit">Credit Card</label>
+                <input type="checkbox" id="debit" name="payment" value="debit">
+                <label for="debit">Debit Card</label><br>
+            </div>
+
+            <!-- payment credentials  -->
+            <label for="cardNumber">Card Number:</label>
+            <input type="text" id="cardNumber" name="cardNumber"><br><br>
+
+            <label for="expiryDate">Expiry Date:</label>
+            <input type="text" id="expiryDate" name="expiryDate"><br><br>
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv">
+        </fieldset>
+
+        <!-- if delivering the pizza, preferance to deliver it -->
+        <fieldset>
+            <legend>Delivery Preferences</legend>
+            <label for="additional">Additional Preferences:</label>
+            <textarea id="additional" name="additional"></textarea> <br>
+
+            <label for="time">Expected Delivery Time:</label>
+            <input type="time" id="time" name="time" value=" "><br>
+        </fieldset>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+        </fieldset>
+    </main>
+
+    <!-- footer of the page -->
+    <footer>
+        <p><small>Thank You for being our valued customer !!!</small></p>
+    </footer>
+
+</body>
+</html>

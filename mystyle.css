@@ -1,0 +1,33 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f1e6e6;
+}
+
+header {
+    background-color: #db1919;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    margin: 20px;
+    background-color: #f7a22c;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+fieldset {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-color: #11808c;
+}
+
+footer {
+    background-color: #688f0e;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
